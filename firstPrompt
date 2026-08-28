@@ -1,0 +1,36 @@
+Настрой проект <> для разработки:
+
+1. Создай AGENTS.md в корне проекта с правилами:
+   - Технологии: <>.
+   - Архитектура: <>.
+   - Команды: ./gradlew build, docker-compose up.
+
+2. Создай пустые скиллсы в .opencode/skills/:
+   - .opencode/skills/<skill1>/SKILL.md
+   - .opencode/skills/<skill2>/SKILL.md
+   
+3. Создай opencode.json в корне с ролями:
+   - architect: проектирует структуру и контракты.
+   - developer: пишет код по контрактам.
+   - reviewer: проверяет код на ошибки и соответствие контрактам.
+   - judge: анализирует отчёт ревьювера и решает, какие исправления обязательны.
+   - tester: создаёт тесты и docker-compose.
+   Все роли используют модель gpt-4.
+
+Структура будет следующая:
+
+<projectName>/
+├── <service1>/
+├── <service2>/
+├── docker-compose.yml
+├── AGENTS.md
+├── opencode.json
+├── .github/workflows/
+└── .opencode/
+    └── skills/
+        └── <skill1>/
+            └── SKILL.md
+        └── <skill2>/
+            └── SKILL.md
+
+да/нет
