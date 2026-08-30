@@ -1,0 +1,27 @@
+{
+  "instructions": ["./AGENTS.md"],
+  "$schema": "https://opencode.ai/config.json",
+  "plugin": [
+    "@rexeus/agentic"
+  ],
+  "permission": [
+    {"permission": "read", "action": "allow", "pattern": "*"},
+    {"permission": "glob", "action": "allow", "pattern": "*"},
+    {"permission": "grep", "action": "allow", "pattern": "*"},
+    {"permission": "bash", "action": "allow", "pattern": "*"},
+    {"permission": "edit", "action": "allow", "pattern": "*"},
+    {"permission": "write", "action": "allow", "pattern": "*"},
+    {"permission": "task", "pattern": "scout", "action": "allow"},
+    {"permission": "task", "pattern": "analyst", "action": "allow"},
+    {"permission": "task", "pattern": "architect", "action": "allow"},
+    {"permission": "task", "pattern": "developer", "action": "allow"},
+    {"permission": "task", "pattern": "reviewer-correctness", "action": "allow"},
+    {"permission": "task", "pattern": "reviewer-security", "action": "allow"},
+    {"permission": "task", "pattern": "reviewer-maintainability", "action": "allow"},
+    {"permission": "task", "pattern": "tester-coverage", "action": "allow"},
+    {"permission": "task", "pattern": "tester-artisan", "action": "allow"},
+    {"permission": "task", "pattern": "tester-architect", "action": "allow"},
+    {"permission": "task", "pattern": "refiner", "action": "allow"},
+    {"permission": "task", "pattern": "*", "action": "deny"}
+  ]
+}

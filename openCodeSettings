@@ -8,6 +8,7 @@
     make install-opencode
     // ревьювер (6 моделей, команда /review)
     npx @rexeus/agentic install opencode
+    отредактировала opencode.jsonc (дала права оркестратору)
 
 Происзводительность
     //генератор индексов-графов
