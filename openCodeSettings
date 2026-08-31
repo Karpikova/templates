@@ -3,9 +3,9 @@
     npx opencode-nj-kit
     // тут есть для джавы
     developer-kit:
-    git clone https://github.com/giuseppe-trisciuoglio/developer-kit.git
-    cd developer-kit
-    make install-opencode
+        git clone https://github.com/giuseppe-trisciuoglio/developer-kit.git
+        cd developer-kit
+        make install-opencode
     // ревьювер (6 моделей, команда /review)
     npx @rexeus/agentic install opencode
     отредактировала opencode.jsonc (дала права оркестратору)
@@ -15,3 +15,16 @@
     pip install graphifyy
     graphify opencode install // в каждом проекте
     /graphify . // в каждом проекте
+
+Тестирование
+    vibe-loop //Запуск тестов после каждого изменения кода
+        отключить (для TDD)
+        vl_config_set(verification_command: "")
+        включить назад
+        vl_config_set(verification_command: "mvn test")
+    JaCoCo //CodeCoverage
+    Мутационное тестирование
+        tautest //JS/TS
+            npx tautest init --yes --runner vitest --no-install //разовая настройка
+            npx tautest run --base origin/main                  //для запуска
+        mvn org.pitest:pitest-maven:mutationCoverage -DtargetClasses="com.streaming.*" -DtargetTests="com.streaming.*" //для Java
